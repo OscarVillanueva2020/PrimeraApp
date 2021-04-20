@@ -30,6 +30,7 @@ public class MainActivity extends AppCompatActivity {
     public void sumar (View view){
         int respuestaNumero = Integer.parseInt(numero_uno.getText().toString()) +Integer.parseInt(numero_dos.getText().toString());
         respuesta.setText(respuestaNumero + "");
+
     }
 
     public void resta (View view){
