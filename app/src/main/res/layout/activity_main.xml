@@ -7,7 +7,18 @@
     android:onClick="sumar"
     tools:context=".MainActivity">
 
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="300dp"
+        android:layout_height="125dp"
+        android:layout_marginTop="36dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/linearLayout"
+        app:srcCompat="@drawable/saveme" />
+
     <LinearLayout
+        android:id="@+id/linearLayout"
         android:layout_width="379dp"
         android:layout_height="715dp"
         android:gravity="center"
@@ -53,6 +64,7 @@
                     android:id="@+id/button2"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:onClick="sumar"
                     android:text="@string/btn_text_suma" />
 
                 <Button

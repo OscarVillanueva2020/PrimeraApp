@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -28,18 +29,31 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void sumar (View view){
-        int respuestaNumero = Integer.parseInt(numero_uno.getText().toString()) +Integer.parseInt(numero_dos.getText().toString());
-        respuesta.setText(respuestaNumero + "");
+
+        try {
+            Integer respuestaNumero = Integer.parseInt(numero_uno.getText().toString()) +Integer.parseInt(numero_dos.getText().toString());
+            respuesta.setText(respuestaNumero + "");
+        }
+        catch(Exception e){
+            Toast.makeText(this, "Numeros no validos,ingrese numeros", Toast.LENGTH_SHORT).show();
+        }
 
     }
 
     public void resta (View view){
-        int respuestaNumero = Integer.parseInt(numero_uno.getText().toString()) - Integer.parseInt(numero_dos.getText().toString());
-        respuesta.setText(respuestaNumero + "");
+
+        try {
+            Integer respuestaNumero = Integer.parseInt(numero_uno.getText().toString()) - Integer.parseInt(numero_dos.getText().toString());
+            respuesta.setText(respuestaNumero + "");
+        }
+        catch(Exception e){
+            Toast.makeText(this, "por favor no sea tonto, ingrese 2 numeros", Toast.LENGTH_SHORT).show();
+        }
+
     }
 
     public void multiplicar (View view){
-        int respuestaNumero = Integer.parseInt(numero_uno.getText().toString()) * Integer.parseInt(numero_dos.getText().toString());
+        Integer respuestaNumero = Integer.parseInt(numero_uno.getText().toString()) * Integer.parseInt(numero_dos.getText().toString());
         respuesta.setText(respuestaNumero + "");
     }
 

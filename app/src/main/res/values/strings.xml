@@ -4,8 +4,8 @@
 
     <string name="btn_text_suma">suma</string>
     <string name="btn_text_resta">resta</string>
-    <string name="btn_text_multiplicacion">multiplicacion</string>
+    <string name="btn_text_multiplicacion">multiply</string>
     <string name="btn_text_division">division</string>
-    
+
     <string name="text_hint_numero">Escribe aqui un numero</string>
 </resources>
