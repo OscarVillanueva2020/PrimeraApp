@@ -53,12 +53,27 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void multiplicar (View view){
-        Integer respuestaNumero = Integer.parseInt(numero_uno.getText().toString()) * Integer.parseInt(numero_dos.getText().toString());
-        respuesta.setText(respuestaNumero + "");
+
+        try {
+            Integer respuestaNumero = Integer.parseInt(numero_uno.getText().toString()) * Integer.parseInt(numero_dos.getText().toString());
+            respuesta.setText(respuestaNumero + "");
+        }
+        catch(Exception e){
+            Toast.makeText(this, "por favor no sea tonto, ingrese 2 numeros", Toast.LENGTH_SHORT).show();
+        }
     }
 
     public void dividir (View view){
-        float respuestaNumero = Float.parseFloat(numero_uno.getText().toString()) / Float.parseFloat(numero_dos.getText().toString());
-        respuesta.setText(respuestaNumero + "");
+
+        try {
+            float respuestaNumero = Float.parseFloat(numero_uno.getText().toString()) / Float.parseFloat(numero_dos.getText().toString());
+            respuesta.setText(respuestaNumero + "");
+        }
+        catch(Exception e){
+            Toast.makeText(this, "por favor no sea tonto, ingrese 2 numeros", Toast.LENGTH_SHORT).show();
+        }
+
     }
+
+
 }
